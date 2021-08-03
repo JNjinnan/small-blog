@@ -73,12 +73,24 @@ WSGI_APPLICATION = 'small.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'small_blog',     #创建的数据库
+        'USER': 'small_user',     #mysql用户名
+        'PASSWORD': 'root',     #mysql密码
+        'HOST':'localhost',     #IP
+        'PORT':'3306',     #端口号
     }
 }
+
 
 
 # Password validation
